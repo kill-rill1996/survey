@@ -1,5 +1,6 @@
 # Survey
-API survey service [Andreev Kirill](t.me/kill_rilll)<br>
+API survey service [Andreev Kirill](https://t.me/kill_rilll)
+<br>
 
 ### Для запуска 
 ```

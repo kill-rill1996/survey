@@ -28,7 +28,7 @@ class SurveyListView(APIView):
 
 
 class SurveyDetailView(APIView):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
         survey = get_object_or_404(Survey, id=pk)
