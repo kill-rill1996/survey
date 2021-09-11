@@ -1,0 +1,5 @@
+CREATE USER admin WITH PASSWORD 'devpass';
+
+CREATE DATABASE survey_db;
+GRANT ALL PRIVILEGES ON DATABASE survey_db TO admin;
+
