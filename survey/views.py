@@ -1,6 +1,6 @@
 from rest_framework import status
 from rest_framework.mixins import CreateModelMixin, UpdateModelMixin
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView, RetrieveAPIView, get_object_or_404
 from rest_framework.views import APIView
@@ -19,7 +19,7 @@ from .models import Survey, Answer, Variant, Question, Choice
 
 
 class SurveyListView(APIView):
-    permission_classes = [IsAuthenticated, ]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         survey = Survey.objects.filter(is_active=True)
@@ -28,7 +28,7 @@ class SurveyListView(APIView):
 
 
 class SurveyDetailView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, pk):
         survey = get_object_or_404(Survey, id=pk)
