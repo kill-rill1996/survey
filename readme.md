@@ -4,6 +4,6 @@ API survey service [Andreev Kirill](https://t.me/kill_rilll)
 
 ### Для запуска 
 ```
-$ docker-compose build --no-cache 
-$ docker-compose up   
+$ docker-compose build --no-cache
+$ docker-compose up
 ```
